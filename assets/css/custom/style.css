@@ -835,7 +835,18 @@ i {
 }
 
 .package-detail-content {
-  max-height: 400px;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 1rem;
+
+  /* Hide scrollbar for Chrome, Safari, Edge */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.package-detail-content-about {
+  max-height: 500px;
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 1rem;
