@@ -1,0 +1,589 @@
+/* Updated root variables and removed all Bootstrap blue borders */
+:root {
+  --primary-color: #2271b6;
+  --primary-light: #4a90e2;
+  --primary-dark: #1a5a94;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --info-color: #17a2b8;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --border-color: #e5e7eb;
+  --text-muted: #6b7280;
+  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --border-radius: 0.75rem; /* Increased rounded corners */
+}
+
+/* Updated typography with black placeholder text */
+body {
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: var(--dark-color);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Typography Scale Implementation */
+.display-hero {
+  font-family: "Signika", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.subheadline {
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  font-size: 34px;
+}
+
+.lead-text {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+}
+
+.subtitle {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.subheading {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.body-text {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.body-text1 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.caption-ui-label {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.overline {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Completely removed Bootstrap focus states and borders */
+.form-control:focus,
+.form-select:focus,
+.btn:focus,
+.form-input:focus,
+.form-check-input:focus {
+  border-color: var(--border-color) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.result-input-white:focus,
+.result-input-blue:focus {
+  border-color: var(--border-color) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Container Styles */
+.form-container {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  height: fit-content;
+  max-height: 120vh; /* Increased length of left card */
+  overflow-y: auto; /* Only left side scrolls */
+}
+
+.results-container {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  height: fit-content;
+  max-height: none; /* Right side does not scroll */
+}
+
+/* Updated form input styles with black placeholder text */
+.form-group {
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1.2rem 1rem 0.4rem;
+  font-size: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: white;
+  font-family: "Nunito", sans-serif;
+  color: #000000;
+}
+
+.form-input:focus {
+  border-color: var(--border-color);
+  box-shadow: none;
+}
+
+.form-input::placeholder {
+  color: transparent; /* Hide placeholder by default */
+  transition: all 0.2s ease;
+}
+
+.form-input:focus::placeholder {
+  color: #000000;
+  opacity: 0.7; /* Show placeholder on focus */
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  top: -0.6rem;
+  left: 0.8rem;
+  font-size: 0.75rem;
+  color: #000000;
+  font-weight: 600;
+}
+
+/* Updated form label styles with proper black text */
+.form-label {
+  position: absolute;
+  top: 0.9rem;
+  left: 1rem;
+  padding: 0 0.3rem;
+  font-size: 0.95rem;
+  color: #000000;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+  z-index: 1;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label,
+.form-select:focus + .form-label,
+.form-select:not([value=""]) + .form-label {
+  top: -0.6rem;
+  left: 0.8rem;
+  font-size: 0.75rem;
+  color: #000000;
+  font-weight: 600;
+}
+
+.form-label.required::after {
+  content: " *";
+  color: var(--danger-color);
+}
+
+.form-select {
+  padding-top: 1.2rem !important;
+  padding-bottom: 0.4rem !important;
+  font-family: "Nunito", sans-serif;
+  color: #000000;
+}
+
+/* Input toggle wrapper for positioning toggle and refresh beside input */
+.input-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative; /* Ensure proper stacking */
+}
+
+.input-toggle-wrapper .form-input {
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+.input-toggle-wrapper .refresh-icon {
+  color: var(--primary-color);
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  z-index: 0; /* Keep below input for focus */
+}
+
+.input-toggle-wrapper .form-check {
+  margin: 0;
+}
+
+.pension-toggle,
+.pension-employer-toggle,
+.nsitf-toggle,
+.nhf-toggle {
+  width: 2rem !important;
+  height: 1rem !important;
+}
+
+/* Reduced button size and improved styling */
+.btn-calculate {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  box-shadow: none;
+}
+
+.btn-calculate:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(34, 113, 182, 0.3);
+}
+
+.btn-calculate:focus {
+  box-shadow: none !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* Improved white results card with better input alignment */
+.white-results-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--border-color);
+}
+
+.result-section {
+  margin-bottom: 2rem;
+}
+
+.result-section:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.blue-accent-bar {
+  width: 4px;
+  height: 60px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.section-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.section-title {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--dark-color);
+  margin: 0 0 0.25rem 0;
+}
+
+.section-subtitle {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.result-input-white {
+  width: 200px; /* Increased width for better visibility */
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: #f8f9fa;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--dark-color);
+  text-align: right;
+  flex-shrink: 0;
+  cursor: text; /* Removed disabled look */
+}
+
+.result-input-white:focus {
+  outline: none;
+  border-color: var(--border-color);
+  box-shadow: none;
+}
+
+/* Tax Brackets Section */
+.tax-brackets-section {
+  margin-top: 1.5rem;
+}
+
+.table-title {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+/* Tax Table Styles */
+.tax-table {
+  margin-bottom: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+
+.tax-table th {
+  background-color: var(--primary-color) !important;
+  color: white;
+  font-weight: 700;
+  border-color: var(--primary-dark) !important;
+  padding: 0.75rem 0.5rem;
+  text-align: left; /* Aligned to the left */
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+}
+
+.tax-table td {
+  padding: 0.75rem 0.5rem;
+  vertical-align: middle;
+  border-color: var(--border-color);
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  text-align: left; /* Aligned to the left */
+}
+
+.tax-table .taxable-amount,
+.tax-table .tax-amount {
+  text-align: left; /* Aligned to the left */
+  font-weight: 600;
+}
+
+.tax-table .table-info td {
+  background-color: #e3f2fd !important;
+  font-weight: 700;
+}
+
+/* Blue Results Card Styles */
+.blue-results-card {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light)
+  );
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  color: white;
+  box-shadow: var(--box-shadow);
+}
+
+.blue-result-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 0.5rem;
+}
+
+.blue-result-row:last-child {
+  margin-bottom: 0;
+}
+
+.white-accent-bar {
+  width: 4px;
+  height: 50px;
+  background-color: white;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.blue-result-label {
+  flex: 1;
+  min-width: 0;
+}
+
+.blue-result-label strong {
+  display: block;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 0.25rem;
+  color: white;
+}
+
+.blue-result-label small {
+  display: block;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  opacity: 0.9;
+  line-height: 1.3;
+  color: white;
+}
+
+.result-input-blue {
+  width: 200px; /* Increased width for better visibility */
+  padding: 0.75rem 1rem;
+  background-color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--dark-color);
+  text-align: right;
+  flex-shrink: 0;
+  cursor: text; /* Removed disabled look */
+}
+
+.result-input-blue:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* Form Text Styles */
+.form-text {
+  font-size: 12px;
+  margin-top: 0.25rem;
+  color: var(--text-muted);
+  font-family: "Nunito", sans-serif;
+}
+
+/* Enhanced responsive design for better mobile experience */
+@media (max-width: 991.98px) {
+  .form-container {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    max-height: 80vh;
+  }
+
+  .results-container {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    max-height: none;
+  }
+
+  .white-results-card,
+  .blue-results-card {
+    padding: 1.5rem;
+  }
+
+  .blue-result-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .result-input-blue,
+  .result-input-white {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .blue-accent-bar {
+    height: 4px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .form-container {
+    padding: 1rem;
+    max-height: 70vh;
+  }
+
+  .results-container {
+    padding: 1rem;
+    max-height: none;
+  }
+
+  .white-results-card,
+  .blue-results-card {
+    padding: 1rem;
+  }
+
+  .tax-table {
+    font-size: 12px;
+  }
+
+  .tax-table th,
+  .tax-table td {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .blue-result-label strong {
+    font-size: 14px;
+  }
+
+  .blue-result-label small {
+    font-size: 11px;
+  }
+
+  .blue-accent-bar,
+  .white-accent-bar {
+    height: 40px;
+  }
+
+  .btn-calculate {
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
+
+/* Animation for smooth transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.results-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Print styles */
+@media print {
+  .btn-calculate {
+    display: none;
+  }
+
+  .form-container,
+  .results-container {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}

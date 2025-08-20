@@ -1,0 +1,36 @@
+# HRPayHub
+
+HRPayHub is a web application for HR, payroll, and accounting solutions tailored for Nigerian businesses and UK pharmacies.
+
+## Directory Structure
+- `assets/`: CSS, JS, and image files.
+  - `css/`: Stylesheets (styles.css, Bootstrap, Owl Carousel).
+  - `js/`: JavaScript files (scripts.js, libraries).
+  - `images/`: Images organized by page/purpose.
+- `pages/`: HTML files for each page (index.html, about.html, etc.).
+- `pages/partials/`: Reusable components (navbar.html, footer.html).
+
+## Dependencies
+- Bootstrap 5.3.2 (CDN: https://cdn.jsdelivr.net/npm/bootstrap@5.3.2)
+- jQuery 3.6.0 (CDN: https://code.jquery.com/jquery-3.6.0.min.js)
+- Owl Carousel 2.3.4 (CDN: https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4)
+
+## Setup Instructions
+1. Clone the repository: `git clone <repo-url>`
+2. Serve the project using a local server:
+   - Option 1: Use VS Code Live Server extension.
+   - Option 2: Run `python -m http.server` in the project root.
+3. Open `http://localhost:8000/pages/index.html` in a browser.
+
+## Development Guidelines
+- Use 2-space indentation for HTML/CSS/JS.
+- Follow BEM naming for CSS classes (e.g., `.hero-section__title`).
+- Add new pages in the `pages/` folder, reusing `navbar.html` and `footer.html` via includes.
+
+## Handover Notes
+- Video section: Placeholder images are used; actual video playback needs implementation.
+- Form submission: Currently simulates submission; integrate with backend API (e.g., Node.js or PHP).
+- Test mobile responsiveness for dropdown menus and carousel.
+
+## Contact
+For questions, contact [care@hrpayhub.com](mailto:care@hrpayhub.com).
