@@ -76,6 +76,12 @@ h2,
   font-size: 24px;
 }
 
+.subheadline5 {
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  font-size: 34px;
+}
+
 h3,
 .lead-text {
   font-family: "Yanone Kaffeesatz", sans-serif;
@@ -96,6 +102,12 @@ h4,
   font-size: 36px;
 }
 
+.subtitle3 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
 h5,
 .subheading {
   font-family: "Nunito", sans-serif;
@@ -109,16 +121,22 @@ h5,
   font-size: 32px;
 }
 
+.bodytext1 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
 .bodytext2 {
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   font-size: 16px;
 }
 
-.bodytext1 {
+.bodytext3 {
   font-family: "Nunito", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .caption,
@@ -225,6 +243,43 @@ h5,
 
 .bg-primary {
   background-color: var(--hrp-primary) !important;
+}
+
+.g-6,
+.gy-6 {
+  --bs-gutter-y: 4rem;
+}
+.g-6,
+.gx-6 {
+  --bs-gutter-x: 4rem;
+}
+
+.g-7,
+.gy-7 {
+  --bs-gutter-y: 5rem;
+}
+.g-7,
+.gx-7 {
+  --bs-gutter-x: 5rem;
+}
+
+.g-8,
+.gy-8 {
+  --bs-gutter-y: 6rem;
+}
+.g-8,
+.gx-8 {
+  --bs-gutter-x: 6rem;
+}
+
+.g-9,
+.gy-9 {
+  --bs-gutter-y: 7rem;
+}
+
+.g-10,
+.gx-10 {
+  --bs-gutter-x: 8rem;
 }
 
 /* start free trail button */
@@ -443,6 +498,113 @@ a:focus {
   }
 }
 
+/* Navigation Enhancements */
+.navbar {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar-brand {
+  margin-right: 1rem; /* Reduced spacing */
+}
+
+.navbar-nav {
+  flex-grow: 0; /* Prevent over-expansion */
+  justify-content: flex-start; /* Align items closer */
+  gap: 0.5rem; /* Consistent spacing between links */
+}
+
+.navbar-nav .nav-link {
+  padding: 0.5rem 0.8rem; /* Reduced padding */
+  margin-right: 0; /* Remove extra margin */
+  color: #212529 !important;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s ease;
+}
+
+.navbar-collapse {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-collapse .d-flex {
+  margin-left: 1rem; /* Reduced spacing for buttons */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    text-align: left;
+    margin: 0;
+    gap: 0; /* Remove gap for mobile */
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 0.1rem;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.4rem 1rem;
+    border-bottom: none;
+  }
+
+  .navbar-nav .dropdown-menu {
+    text-align: left;
+    border: none;
+    box-shadow: none;
+    min-width: 100%;
+    margin: 0;
+    border-radius: 0;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+  }
+
+  .navbar-nav .dropdown-menu.show {
+    opacity: 1;
+    max-height: 500px;
+    visibility: visible;
+  }
+
+  .navbar-nav .dropdown-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .dropdown-submenu > .dropdown-menu {
+    position: static;
+    left: 0;
+    margin: 0;
+    padding-left: 1rem;
+    min-width: 100%;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+  }
+
+  .dropdown-submenu > .dropdown-menu.show {
+    opacity: 1;
+    max-height: 500px;
+    visibility: visible;
+  }
+
+  .navbar-collapse .d-flex {
+    justify-content: center;
+    margin: 0.5rem 0;
+    padding-bottom: 0.5rem;
+  }
+}
+
+/* Remove thick border on mobile navbar toggler */
+.navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 /* Hero Section */
 
 .hero-divider {
@@ -659,6 +821,17 @@ i {
   padding: 2rem;
   height: 100%;
   background-color: var(--hrp-bronze-detail-bg);
+}
+
+.flexible-plans-content {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 1rem;
+
+  /* Hide scrollbar for Chrome, Safari, Edge */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
 .package-detail-content {
@@ -1202,6 +1375,101 @@ i {
   background: var(--hrp-gold);
 }
 
+/* Footer Enhancements for Two-Column Mobile Layout */
+.footer-section {
+  background: var(--hrp-footer);
+  padding: 2rem 0; /* Reduced padding for mobile */
+}
+
+.footer-section .subtitle {
+  font-family: "Ubuntu", sans-serif; /* Matches existing subtitle */
+  font-weight: 700;
+  font-size: 1.1rem; /* Slightly smaller for mobile */
+  position: relative;
+  padding-left: 18px;
+  display: inline-block;
+}
+
+.footer-section .bodytext2 {
+  font-family: "Nunito", sans-serif; /* Matches existing bodytext2 */
+  font-weight: 400;
+  font-size: 0.9rem; /* Optimized for mobile */
+  line-height: 1.6; /* Improved readability */
+}
+
+.footer-section address {
+  margin-bottom: 1.5rem; /* Consistent spacing */
+}
+
+.footer-section a {
+  display: inline-block;
+  padding: 0.5rem; /* Touch-friendly tap targets */
+  transition: color 0.2s ease; /* Smooth hover effect */
+}
+
+.footer-section a:hover {
+  color: var(--hrp-gold); /* Gold hover effect from palette */
+}
+
+.footer-section .list-unstyled li {
+  margin-bottom: 0.75rem; /* Spacing for Quick Links */
+}
+
+.footer-section .bi {
+  font-size: 1.5rem; /* Larger social icons for touch */
+  padding: 0.5rem; /* Touch-friendly */
+}
+
+.footer-section hr {
+  opacity: 0.5; /* Softer divider */
+  border-color: var(--hrp-light-gray); /* Matches palette */
+}
+
+.footer-section .full-width-hr {
+  width: 100vw; /* Full viewport width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.footer-section .row.g-3 > .col-6 {
+  flex: 0 0 50%; /* Two columns on mobile */
+  max-width: 50%;
+}
+
+.footer-social-icons {
+  margin-left: 11rem;
+}
+
+/* Desktop layout (4 columns) */
+@media (min-width: 992px) {
+  .footer-section .row.g-3 > .col-6 {
+    flex: 0 0 25%; /* 4 columns on larger screens */
+    max-width: 25%;
+  }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 575.98px) {
+  .footer-section {
+    padding: 1.5rem 0; /* Further reduced padding */
+  }
+  .footer-section .subtitle {
+    font-size: 1rem; /* Slightly smaller for small screens */
+  }
+  .footer-section .bodytext2 {
+    font-size: 0.85rem; /* Slightly smaller for small screens */
+  }
+  .footer-section .bi {
+    font-size: 1.25rem; /* Adjusted icon size */
+  }
+  .footer-social-icons {
+    margin-left: 0rem;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 991.98px) {
   .navbar-nav {
@@ -1348,3 +1616,209 @@ i {
 }
 
 /* About Page styling */
+
+/* contact us page styling */
+.border-form-gray {
+  border-color: #ced4da !important;
+}
+
+.btn-table {
+  --bs-btn-padding-x: 0.5rem !important;
+  --bs-btn-padding-y: 0.375rem !important;
+  --bs-btn-font-size: 0.8rem !important;
+  --bs-btn-font-weight: 100 !important;
+  --bs-btn-line-height: 1.5 !important;
+}
+
+.btn-outline-secondary-table:hover {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+/* contact us page table styling */
+
+.contact-us-table {
+  table-layout: fixed;
+  width: 100%;
+  background: white;
+  border-radius: 0.85rem;
+  overflow: hidden;
+}
+
+.contact-us-table td,
+.contact-us-table th {
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #000000;
+}
+
+.btn-table {
+  width: 120px;
+  display: inline-block;
+  text-align: center;
+}
+
+.contact-us-table {
+  background: white;
+  border-radius: 0.85rem;
+  overflow: hidden;
+}
+
+.contact-us-table th {
+  background: transparent;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.contact-us-table td,
+thead,
+th {
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #000000;
+}
+
+.get-started-btn:hover {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+.contact-us-inquiry-td {
+  padding-top: 1.5rem !important;
+}
+
+/* contact us page styling */
+
+/* free trial page styling */
+
+.accordion-button {
+  padding: 1rem 0;
+}
+
+/* Free trial card - responsive */
+.free-trial-card {
+  width: 100%;
+  max-width: 600px; /* keeps it from getting too wide on large screens */
+  height: 348px; /* let content dictate height */
+}
+
+/* Detailed breakdown image - responsive */
+.detailed-breakdown-img {
+  width: 100%;
+  max-width: 654px; /* keeps it from getting too wide on large screens */
+  height: 348px; /* let content dictate height */
+  margin-left: 0; /* default no offset on small screens */
+}
+
+/* For medium screens and up */
+@media (min-width: 768px) {
+  .detailed-breakdown-img {
+    margin-left: -12px;
+  }
+}
+
+/* For large screens and up */
+@media (min-width: 992px) {
+  .detailed-breakdown-img {
+    margin-left: -24px;
+  }
+}
+
+/* free trial page styling */
+
+/* remote work styling */
+
+.remote-work-content {
+  max-height: 460px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 1rem;
+
+  /* Hide scrollbar for Chrome, Safari, Edge */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Free trial card - responsive */
+.remote-work-card-above {
+  width: 100%;
+  max-width: 350px; /* keeps it from getting too wide on large screens */
+  max-height: 170px; /* let content dictate height */
+}
+
+.remote-work-card-below {
+  width: 100%;
+  max-width: 400px; /* keeps it from getting too wide on large screens */
+  max-height: 170px; /* let content dictate height */
+}
+
+.second-card {
+  background-color: var(--hrp-footer) !important;
+}
+
+.integration-card {
+  height: 85%;
+}
+
+/* Scoped to pricing-section to avoid affecting other cards */
+.pricing-section .card-body ul.list-unstyled {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the entire list */
+  min-height: 200px; /* Ensure consistent height across cards */
+}
+
+/* Ensure consistent alignment for list items */
+.pricing-section .card-body ul.list-unstyled li {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the li content */
+  width: 100%; /* Full width for centering */
+  max-width: 300px; /* Limit width for better centering */
+}
+
+/* Consistent width for checkmark icons */
+.pricing-section .card-body ul.list-unstyled li i {
+  flex: 0 0 24px; /* Fixed width for icons */
+  text-align: center; /* Center icon within its space */
+}
+
+/* Ensure text aligns consistently */
+.pricing-section .card-body ul.list-unstyled li span {
+  flex: 1; /* Text takes remaining space */
+  text-align: left; /* Align text left within its container */
+}
+
+/* Match border-primary to --hrp-primary */
+.pricing-section .border-primary,
+.pricing-section .btn.border-primary {
+  border-color: #2271b6 !important; /* Matches --hrp-primary */
+}
+
+/* Ensure equal height for cards */
+.pricing-section .card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure card-body stretches to balance content */
+.pricing-section .card-body {
+  flex-grow: 1; /* Stretch to equalize height */
+}
+
+.subscription-packages-lists {
+  padding-left: 3.5rem !important;
+}
+
+/* remote work styling */
+
+/* save more stay complaint styling */
+.text-scroll-content {
+  max-height: 460px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 1rem;
+
+  /* Hide scrollbar for Chrome, Safari, Edge */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+/* save more stay complaint styling */
