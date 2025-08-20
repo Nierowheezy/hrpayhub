@@ -1,8 +1,3 @@
-/**
- * HRPayHub Landing Page JavaScript
- * Minimal JavaScript for Enhanced User Experience
- */
-
 (function () {
   "use strict";
 
@@ -11,13 +6,38 @@
 
   // Initialize when DOM is loaded
   document.addEventListener("DOMContentLoaded", function () {
-    initializeNavigation();
-    initializeFormValidation();
-    initializeScrollEffects();
-    initializeAccessibility();
-  });
+    try {
+      console.log("DOM loaded, initializing...");
+      // Set the year with fallback for dynamic content
+      const setYear = () => {
+        const yearElement = document.getElementById("year");
+        if (yearElement) {
+          yearElement.textContent = new Date().getFullYear();
+          console.log("Year set to:", yearElement.textContent);
+        } else {
+          console.warn("Year element not found, observing DOM...");
+          const observer = new MutationObserver(() => {
+            const yearElement = document.getElementById("year");
+            if (yearElement) {
+              yearElement.textContent = new Date().getFullYear();
+              console.log("Year set to:", yearElement.textContent);
+              observer.disconnect();
+            }
+          });
+          observer.observe(document.body, { childList: true, subtree: true });
+        }
+      };
+      setYear();
 
-  document.getElementById("year").textContent = new Date().getFullYear();
+      initializeNavigation();
+      initializeFormValidation();
+      initializeScrollEffects();
+      initializeAccessibility();
+      initializeOwlCarousel();
+    } catch (error) {
+      console.error("Error in DOMContentLoaded:", error);
+    }
+  });
 
   function initializeNavigation() {
     // Smooth scroll for final links only
@@ -227,14 +247,9 @@
   }
 
   /**
-   * Utility Functions
+   * Owl Carousel Initialization
    */
-  function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
-
-  (function ($) {
+  function initializeOwlCarousel() {
     const $owl = $("#testimonial-carousel");
     const itemsCount = 3;
 
@@ -301,7 +316,15 @@
     $(".carousel-prev-btn").on("click", () =>
       $owl.trigger("prev.owl.carousel")
     );
-  })(jQuery);
+  }
+
+  /**
+   * Utility Functions
+   */
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
 
   // Error handling
   window.addEventListener("error", function (e) {
