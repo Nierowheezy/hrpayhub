@@ -2,7 +2,9 @@ code
 ├── assets
 │ ├── css
 │ │ ├── custom
-│ │ │ └── style.css
+│ │ │ ├── style-bk-13-08--2025.css
+│ │ │ ├── style.css
+│ │ │ └── tax.css
 │ │ └── .DS_Store
 │ ├── images
 │ │ ├── about-page-images
@@ -15,6 +17,34 @@ code
 │ │ │ ├── modular-design.png
 │ │ │ ├── our-vision.png
 │ │ │ ├── time.png
+│ │ │ └── verify.png
+│ │ ├── become-a-seller-images
+│ │ │ ├── become-a-seller-hero.png
+│ │ │ ├── how-the-hr.png
+│ │ │ ├── marketing.png
+│ │ │ ├── maximize-your-earnings.png
+│ │ │ ├── perfomance.png
+│ │ │ ├── support.png
+│ │ │ ├── user.png
+│ │ │ ├── wallet.png
+│ │ │ └── who-should-join.png
+│ │ ├── contact-page-images
+│ │ │ ├── cotact-us.png
+│ │ │ ├── linkedin-btn.png
+│ │ │ ├── live-webinars-btn.png
+│ │ │ ├── newsletter-btn.png
+│ │ │ ├── verify.png
+│ │ │ ├── who-can-reach.png
+│ │ │ ├── why-business-trust.png
+│ │ │ └── youtube-btn.png
+│ │ ├── flexible-plans-images
+│ │ ├── for-nigerian-businesses
+│ │ │ ├── experienced-unmatched.png
+│ │ │ ├── for-nigerian-businesses-hero.png
+│ │ │ └── save-money.png
+│ │ ├── free-trial-images
+│ │ │ ├── detailed-breakdown.png
+│ │ │ ├── free-trial-hero.png
 │ │ │ └── verify.png
 │ │ ├── home-page-images
 │ │ │ ├── logos
@@ -39,7 +69,8 @@ code
 │ │ │ │ ├── sterling_logo.png
 │ │ │ │ ├── uba_logo.png
 │ │ │ │ ├── wakanow.png
-│ │ │ │ └── wema_logo.png
+│ │ │ │ ├── wema_logo.png
+│ │ │ │ └── zenith_bank_logo.png
 │ │ │ ├── .DS_Store
 │ │ │ ├── Frame 200.png
 │ │ │ ├── annual_paye_filing.png
@@ -71,14 +102,61 @@ code
 │ │ │ ├── shield.png
 │ │ │ ├── silver_package_left_image.png
 │ │ │ └── verify.png
+│ │ ├── pricing-page-images
+│ │ │ └── pricing-hero.png
+│ │ ├── privacy-policy
+│ │ │ └── privacy-policy-hero.png
+│ │ ├── remote-work-page-images
+│ │ │ ├── advantages-of-hrpayhub.png
+│ │ │ ├── how-it-works.png
+│ │ │ ├── key-services-offered.png
+│ │ │ ├── remote-hr-support.png
+│ │ │ ├── remote-work-hero.png
+│ │ │ └── why-choose-remote-hr.png
+│ │ ├── request-demo-imags
+│ │ │ ├── request-demo-hero.png
+│ │ │ └── why-choose.png
+│ │ ├── save-more-stay-compliant-images
+│ │ │ ├── never-miss.png
+│ │ │ ├── save-more-hero.png
+│ │ │ ├── save-time-.png
+│ │ │ └── save-time.png
+│ │ ├── subscription-packages
+│ │ │ └── subscription-packages-hero.png
+│ │ ├── tax-calculator-images
+│ │ │ └── Frame 200 (8).png
+│ │ ├── why-choose-hr-payhub
+│ │ │ ├── advanced-payroll-processing.png
+│ │ │ ├── affordability-without-compromise.png
+│ │ │ ├── comprehensive-employee-management.png
+│ │ │ ├── comprehensive-hr.png
+│ │ │ ├── expense-tracking-and-financial-reporting.png
+│ │ │ ├── industry-specific.png
+│ │ │ ├── why-choose-hRpayhub.png
+│ │ │ └── why-choose-hr-payhub-hero.png
 │ │ └── .DS_Store
 │ ├── js
 │ │ └── custom
-│ │ └── script.js
+│ │ ├── script.js
+│ │ └── tax.js
 │ └── .DS_Store
+├── .DS_Store
 ├── .gitignore
 ├── README.md
 ├── about.html
+├── become-a-seller.html
+├── contact.html
+├── flexible-plans.html
+├── for-nigerian-businesses.html
+├── free-trial.html
+├── home copy.html
 ├── home.html
-├── sample.html
-└── tree.md
+├── pricing.html
+├── privacy-policy.html
+├── remote-work.html
+├── request-demo.html
+├── save-more-stay-compliant.html
+├── subscription-packages.html
+├── terms-and-condition.html
+├── tree.md
+└── why-choose-hr-payhub.html
