@@ -98,7 +98,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
-        <a class="navbar-brand" href="./home.html">
+        <a class="navbar-brand" href="/home.html">
           <img
             src="./assets/images/home-page-images/hrpayhub_logo.png"
             alt="HRPayHub Logo"
@@ -121,7 +121,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav text-dark mx-auto">
             <li class="nav-item">
-              <a class="nav-link" href="./about.html">About Us</a>
+              <a class="nav-link" href="/about.html">About Us</a>
             </li>
 
             <!-- Solutions -->
@@ -137,15 +137,24 @@
                 Solutions <i class="bi bi-chevron-down ms-1"></i>
               </a>
               <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <!-- Nigerian Businesses -->
                 <li class="dropdown-submenu">
                   <a
                     class="dropdown-item submenu-toggle"
-                    href="./for-nigerian-businesses.html"
+                    href="#"
+                    aria-expanded="false"
                   >
                     For Nigerian Businesses
                     <i class="bi bi-chevron-right ms-2"></i>
                   </a>
                   <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/for-nigerian-businesses.html"
+                        >Overview</a
+                      >
+                    </li>
                     <li>
                       <a
                         class="dropdown-item"
@@ -184,11 +193,22 @@
                   </ul>
                 </li>
 
+                <!-- UK Pharmacies -->
                 <li class="dropdown-submenu">
-                  <a class="dropdown-item submenu-toggle" href="#">
-                    For UK Pharmacies <i class="bi bi-chevron-right ms-2"></i>
+                  <a
+                    class="dropdown-item submenu-toggle"
+                    href="#"
+                    aria-expanded="false"
+                  >
+                    For UK Pharmacies
+                    <i class="bi bi-chevron-right ms-2"></i>
                   </a>
                   <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="/for-uk-pharmacies.html"
+                        >Overview</a
+                      >
+                    </li>
                     <li>
                       <a
                         class="dropdown-item"
@@ -236,20 +256,20 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="plansDropdown">
                 <li>
-                  <a class="dropdown-item" href="./subscription-packages.html"
+                  <a class="dropdown-item" href="/subscription-packages.html"
                     >Subscription Packages</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="./pricing.html">Pricing</a>
+                  <a class="dropdown-item" href="/pricing.html">Pricing</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="./request-demo.html"
+                  <a class="dropdown-item" href="/request-demo.html"
                     >Request a Demo</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="./remote-work.html"
+                  <a class="dropdown-item" href="/remote-work.html"
                     >Remote HR Support</a
                   >
                 </li>
@@ -261,7 +281,7 @@
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="./flexible-plans.html"
+                  <a class="dropdown-item" href="/flexible-plans.html"
                     >Flexible Plans</a
                   >
                 </li>
@@ -270,7 +290,7 @@
 
             <!-- Why HRPayHub -->
             <li class="nav-item">
-              <a class="nav-link fw-medium" href="./why-choose-hr-payhub.html"
+              <a class="nav-link fw-medium" href="/why-choose-hr-payhub.html"
                 >Why HRPayHub</a
               >
             </li>
@@ -292,14 +312,14 @@
                   <a
                     class="dropdown-item"
                     href="https://hrpayhub.com/taxcalculatornigeria"
-                    >Tax Calculator (Nigeria - Current)</a
+                    >Nigeria Tax Calculator - Current Tax Law</a
                   >
                 </li>
                 <li>
                   <a
                     class="dropdown-item"
                     href="https://hrpayhub.com/taxcalculatornigeria2025"
-                    >Tax Calculator (Nigeria - 2026)</a
+                    >Nigeria Tax Calculator - New Tax Law</a
                   >
                 </li>
               </ul>
@@ -419,7 +439,7 @@
         <div class="row mb-4 mb-md-5 align-items-center g-4 g-md-5">
           <div class="col-12 col-sm-6 col-lg-4">
             <!-- Added col-sm-6 for tablet -->
-            <div class="card p-3 p-md-4 rounded-3">
+            <div class="card p-3 p-md-4 rounded-3 become-a-seller-card">
               <div class="mb-3 text-center">
                 <img
                   class="img-fluid"
@@ -427,7 +447,7 @@
                   alt="Premium HRPayHub features for compliance"
                 />
               </div>
-              <h5 class="text-center">1. Apply to Become a Reseller</h5>
+              <h5 class="text-center">Apply to Become a Reseller</h5>
               <p>
                 Receive 10% of the subscription fee for the first 6 months for
                 every client you successfully onboard. There is no earnings
@@ -442,7 +462,7 @@
             </div>
           </div>
           <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card p-3 p-md-4">
+            <div class="card p-3 p-md-4 become-a-seller-card">
               <div class="mb-3 text-center">
                 <img
                   class="img-fluid"
@@ -468,7 +488,7 @@
             </div>
           </div>
           <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card p-3 p-md-4 rounded-3">
+            <div class="card p-3 p-md-4 become-a-seller-card">
               <div class="mb-3 text-center">
                 <img
                   class="img-fluid"
@@ -481,6 +501,7 @@
                 Gain in-depth knowledge and receive ongoing support to help you
                 succeed as a reseller.
               </p>
+
               <ul>
                 <li>Product training</li>
                 <li>Sales resources</li>
@@ -497,7 +518,9 @@
               <!-- Reduced gap -->
               <div class="col-12 col-sm-6">
                 <!-- Added col-sm-6 -->
-                <div class="card h-100 p-3 p-md-4 rounded-4">
+                <div
+                  class="card h-100 p-3 p-md-4 rounded-3 become-a-seller-card"
+                >
                   <div class="mb-3 text-center">
                     <img
                       class="img-fluid"
@@ -519,7 +542,9 @@
                 </div>
               </div>
               <div class="col-12 col-sm-6">
-                <div class="card h-100 p-3 p-md-4 rounded-3">
+                <div
+                  class="card h-100 p-3 p-md-4 rounded-3 become-a-seller-card"
+                >
                   <div class="mb-3 text-center">
                     <img
                       class="img-fluid"
@@ -613,7 +638,7 @@
           </div>
         </div>
         <div class="row mb-4 mb-md-5 align-items-start g-10 g-md-5">
-          <div class="col-12 col-lg-6 remote-work-content mb-4">
+          <div class="col-11 col-lg-6 remote-work-content mb-4">
             <div>
               <h4 class="subtitle3 fw-bold mt-4 mb-2 text-start">
                 1. Apply to Become a Reseller
@@ -689,7 +714,7 @@
                   communicate the value of HRPayHub.
                 </li>
                 <li>
-                  <span class="fw-bold">Referral Link: </span> IReceive a
+                  <span class="fw-bold">Referral Link: </span> Receive a
                   personalized referral link to track leads and commissions
                   accurately. Share it via email, social media, or your website.
                 </li>
@@ -782,14 +807,14 @@
     <section class="mt-5">
       <div class="container">
         <div class="row mb-4 mb-md-5 align-items-start g-10 g-md-5">
-          <div class="col-lg-6">
+          <div class="col-lg-6 mb-4 mb-lg-0">
             <img
               src="./assets/images/become-a-seller-images/maximize-your-earnings.png"
               alt="HRPayHubWhy Choose Remote HR Support?"
               class="img-fluid"
             />
           </div>
-          <div class="col-12 col-lg-6 remote-work-content mb-4">
+          <div class="col-11 col-lg-6 remote-work-content mb-4">
             <div>
               <h4 class="subtitle3 fw-bold mb-2 text-start">
                 1. Target High-Value Clients
@@ -926,7 +951,7 @@
               </span>
               <ul>
                 <li>
-                  <span class="fw-bold">Follow-Up Email Sequences: </span>PSend
+                  <span class="fw-bold">Follow-Up Email Sequences: </span>Send
                   follow-up emails after product demos, highlighting key
                   features and client-specific benefits.
                 </li>
@@ -1110,60 +1135,78 @@
         <div class="row g-3">
           <div class="col-6 col-lg-3">
             <h5 class="subtitle mb-3 footer-title">Head Office</h5>
-            <address class="mb-4 bodytext2 ms-3">
-              45 Dan Road, Suite 125<br />
-              Canton, MA 02021<br />
-              United States<br /><br />
-              <a href="mailto:care@hrpayhub.com" class="text-white"
-                >care@hrpayhub.com</a
-              ><br />
-              <a
-                href="tel:+1-508-455-0015"
-                class="text-white text-decoration-none"
-                >+1-508-455-0015</a
-              >
-            </address>
+            <ul class="list-unstyled ms-3">
+              <li class="mb-4">
+                45 Dan Road, Suite 125<br />
+                Canton, MA 02021<br />
+                United States
+              </li>
+              <li class="mb-2">
+                <a href="mailto:care@hrpayhub.com" class="text-white"
+                  >care@hrpayhub.com</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="tel:+1-508-455-0015"
+                  class="text-white text-decoration-none"
+                  >+1-508-455-0015</a
+                >
+              </li>
+            </ul>
           </div>
 
           <div class="col-6 col-lg-3">
             <h5 class="subtitle mb-3 footer-title">Nigeria Office</h5>
-            <address class="mb-4 bodytext2 ms-3">
-              7th Floor Mulliner Towers<br />
-              39 Alfred Rewane Road<br />
-              Ikoyi, Lagos, Nigeria<br /><br />
-              <a href="mailto:care@hrpayhub.com" class="text-white"
-                >care@hrpayhub.com</a
-              ><br />
-              <a
-                href="tel:+234-201-700-1615"
-                class="text-white text-decoration-none"
-                >+234-201-700-1615</a
-              ><br />
-              <a
-                href="tel:+234-915-998-4673"
-                class="text-white text-decoration-none"
-                >+234-915-998-4673</a
-              >
-            </address>
+            <ul class="list-unstyled ms-3">
+              <li class="mb-4">
+                7th Floor Mulliner Towers<br />
+                39 Alfred Rewane Road<br />
+                Ikoyi, Lagos, Nigeria
+              </li>
+              <li class="mb-2">
+                <a href="mailto:care@hrpayhub.com" class="text-white"
+                  >care@hrpayhub.com</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="tel:+234-201-700-1615"
+                  class="text-white text-decoration-none"
+                  >+234-201-700-1615</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="tel:+234-915-998-4673"
+                  class="text-white text-decoration-none"
+                  >+234-915-998-4673</a
+                >
+              </li>
+            </ul>
           </div>
 
           <div class="col-6 col-lg-3">
             <h5 class="subtitle mb-3 footer-title">UK Office</h5>
-            <address class="mb-4 bodytext2 ms-3">
-              155 Edge Lane<br />
-              Liverpool, L7 2PF<br />
-              United Kingdom<br /><br />
-              <a
-                href="mailto:care@hrpayhub.com"
-                class="text-white text-decoration-none"
-                >care@hrpayhub.com</a
-              ><br />
-              <a
-                href="tel:+44-151-351-4515"
-                class="text-white text-decoration-none"
-                >+44-151-351-4515</a
-              >
-            </address>
+            <ul class="list-unstyled ms-3">
+              <li class="mb-4">
+                155 Edge Lane<br />
+                Liverpool, L7 2PF<br />
+                United Kingdom
+              </li>
+              <li class="mb-2">
+                <a href="mailto:care@hrpayhub.com" class="text-white"
+                  >care@hrpayhub.com</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="tel:+44-151-351-4515"
+                  class="text-white text-decoration-none"
+                  >+44-151-351-4515</a
+                >
+              </li>
+            </ul>
           </div>
 
           <div class="col-6 col-lg-3">
@@ -1190,11 +1233,17 @@
                   >Contact Us</a
                 >
               </li>
-              <li class="mb-2">
+
+              <li class="mb-4">
                 <a
                   href="https://hrpayhub.com/taxcalculatornigeria"
+                  class="text-white text-decoration-none mb-2"
+                  >Nigeria Tax Calculator - Current Tax Law</a
+                >
+                <a
+                  href="https://hrpayhub.com/taxcalculatornigeria2025"
                   class="text-white text-decoration-none"
-                  >Tax Calculator</a
+                  >Nigeria Tax Calculator - New Tax Law</a
                 >
               </li>
             </ul>

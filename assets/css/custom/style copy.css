@@ -34,30 +34,6 @@
   --carousel-black: #000000; /* Base Black from palette */
   --carousel-primary-blue: #2271b6; /* Primary Blue from palette */
   --carousel-wrap-width: 1100px; /* Max width for carousel container */
-
-  /* cookie consent panel */
-  --hrp-dark: #343a40;
-  --hrp-white: #ffffff;
-  --hrp-gray-100: #f8f9fa;
-  --hrp-gray-200: #e9ecef;
-  --hrp-gray-300: #dee2e6;
-  --hrp-gray-400: #ced4da;
-  --hrp-gray-500: #adb5bd;
-  --hrp-gray-600: #6c757d;
-  --hrp-gray-700: #495057;
-  --hrp-gray-800: #343a40;
-  --hrp-gray-900: #212529;
-  /* cookie consent panel */
-
-  /* Blog Styles */
-  ---hrp-blog-dark: #353535;
-  ---hrp-blog-light: #f5f5f5;
-  ---hrp-blog-primary: #2271b6;
-  /* Blog Styles */
-
-  /* For Nigerian Businesses  */
-  ---hrp-light-gray: #fbfbfb;
-  /* For Nigerian Businesses  */
 }
 
 /* Added for typography and spacing compliance */
@@ -132,12 +108,6 @@ h4,
   font-size: 16px;
 }
 
-.subtitle4 {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
-  font-size: 35px;
-}
-
 h5,
 .subheading {
   font-family: "Nunito", sans-serif;
@@ -149,12 +119,6 @@ h5,
   font-family: "Nunito", sans-serif;
   font-weight: 700;
   font-size: 32px;
-}
-
-.subheading3 {
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  font-size: 20px;
 }
 
 .bodytext1 {
@@ -548,7 +512,7 @@ a:focus {
   align-items: center;
 }
 
-.navbar-collapse .d-flex {
+.navbar-collapse .d-fle x {
   margin-left: 1rem;
 }
 
@@ -776,22 +740,17 @@ i {
   background-color: var(--hrp-bronze-detail-bg);
 }
 
-/* scrollbar flexible-plans-content */
-
-/* scrollbar flexible-plans-content */
+/* scrollbar */
 .flexible-plans-content {
-  max-height: 400px; /* Adjust if content is too short */
-  overflow-y: scroll; /* Always show scrollbar */
+  max-height: 400px;
+  overflow-y: auto;
   overflow-x: hidden;
   padding-right: 1rem;
-  padding-bottom: 1rem; /* For button spacing */
-  /* scrollbar-width: thin; Firefox: Thin scrollbar */
-  -ms-overflow-style: auto; /* IE and Edge: Enable scrollbar */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  scrollbar-width: thin; /* Firefox: Make scrollbar visible and thin */
+  -ms-overflow-style: auto; /* IE and Edge: Enable default scrollbar */
 }
 .flexible-plans-content::-webkit-scrollbar {
-  width: 8px; /* Ensure visible */
-  display: block; /* Force scrollbar visibility in WebKit */
+  width: 8px; /* Match your existing package-detail-content styling */
 }
 .flexible-plans-content::-webkit-scrollbar-track {
   background: #f1f1f1;
@@ -804,35 +763,52 @@ i {
 .flexible-plans-content::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-/* scrollbar flexible-plans-content */
-/* scrollbar flexible-plans-content */
 
-/* scrollbar package-detail-content */
+/* scrollbar */
 
 .package-detail-content {
   max-height: 500px;
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 1rem;
-  /* scrollbar-width: thin; Firefox: Make scrollbar visible and thin */
-  -ms-overflow-style: auto; /* IE and Edge: Enable default scrollbar */
+
+  /* Hide scrollbar for Chrome, Safari, Edge */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
+
+.package-detail-content-about {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 1rem;
+
+  /* Hide scrollbar for Chrome, Safari, Edge */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.package-detail-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
 .package-detail-content::-webkit-scrollbar {
   width: 8px;
 }
+
 .package-detail-content::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 10px;
 }
+
 .package-detail-content::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 10px;
 }
+
 .package-detail-content::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
-/* scrollbar package-detail-content */
 
 .package-detail-image {
   display: flex;
@@ -853,15 +829,12 @@ i {
   background: white;
   border-radius: 0.85rem;
   overflow: hidden;
-  border: none; /* Reinforce table-borderless to remove default borders */
 }
 
 .comparison-table th {
   background: transparent;
   padding: 1rem;
   font-weight: 600;
-  border-bottom: 1px solid #e5e7eb; /* Match td border */
-  border-top: none; /* Prevent default top border */
 }
 
 .comparison-table td {
@@ -870,7 +843,7 @@ i {
 }
 
 /* compare packages */
-/* .compare-packages-title {
+.compare-packages-title {
   position: relative;
   padding-left: 14px;
   display: inline-block;
@@ -884,7 +857,7 @@ i {
   width: 3px;
   height: 44px;
   background: var(--hrp-gold);
-} */
+}
 
 /* Built for Industry Section */
 .built-for-industry {
@@ -1283,16 +1256,15 @@ i {
   width: 100%;
   padding: 1.2rem 1rem 0.4rem;
   font-size: 1rem;
-  border: 1px solid #e5e7eb;
+  border: 2px solid #e5e7eb;
   border-radius: 0.5rem;
   outline: none;
   transition: border-color 0.3s ease;
 }
 
-.form-control:focus {
-  border-color: #e5e7eb; /* Matches .form-input’s default border */
-  box-shadow: none !important; /* Removes Bootstrap’s blue glow */
-  outline: none; /* Removes browser outline */
+.form-input:focus {
+  border-color: var(--hrp-primary, #2271b6);
+  box-shadow: none;
 }
 
 .form-input::placeholder {
@@ -1374,7 +1346,7 @@ i {
 
 .footer-section a {
   display: inline-block;
-  /* padding: 0.5rem;  */
+  padding: 0.5rem; /* Touch-friendly tap targets */
   transition: color 0.2s ease; /* Smooth hover effect */
 }
 
@@ -1559,10 +1531,8 @@ i {
 /* Home Page styling Ends Here */
 
 /* About Page styling */
-
 .our-vision {
   padding-left: 2rem;
-  margin-bottom: 2rem; /* added margin */
 }
 .our-mission {
   padding-left: 2rem;
@@ -1586,29 +1556,6 @@ i {
   display: block; /* ensures description goes below title */
   margin-bottom: 1rem; /* extra space between each section */
   line-height: 1.6; /* improves readability */
-}
-
-.package-detail-content-about {
-  max-height: 500px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-right: 1rem;
-  /* scrollbar-width: thin; Firefox */
-  -ms-overflow-style: auto; /* IE and Edge */
-}
-.package-detail-content-about::-webkit-scrollbar {
-  width: 8px;
-}
-.package-detail-content-about::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-.package-detail-content-about::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
-}
-.package-detail-content-about::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
 
 /* About Page styling */
@@ -1727,28 +1674,16 @@ th {
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 1rem;
-  /* scrollbar-width: thin; Firefox */
-  -ms-overflow-style: auto; /* IE and Edge */
-}
-.remote-work-content::-webkit-scrollbar {
-  width: 8px;
-}
-.remote-work-content::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-.remote-work-content::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
-}
-.remote-work-content::-webkit-scrollbar-thumb:hover {
-  background: #555;
+
+  /* Hide scrollbar for Chrome, Safari, Edge */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
 /* Free trial card - responsive */
 .remote-work-card-above {
   width: 100%;
-  max-width: 360px; /* keeps it from getting too wide on large screens */
+  max-width: 350px; /* keeps it from getting too wide on large screens */
   max-height: 170px; /* let content dictate height */
 }
 
@@ -1824,292 +1759,22 @@ th {
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 1rem;
-  /* scrollbar-width: thin; Firefox */
-  -ms-overflow-style: auto; /* IE and Edge */
-}
-.text-scroll-content::-webkit-scrollbar {
-  width: 8px;
-}
-.text-scroll-content::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-.text-scroll-content::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
-}
-.text-scroll-content::-webkit-scrollbar-thumb:hover {
-  background: #555;
+
+  /* Hide scrollbar for Chrome, Safari, Edge */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 /* save more stay complaint styling */
 
 /* For Nigerian Businesses */
-.for-nigeria-businesses,
-.for-nigeria-businesses-hr {
+.for-nigeria-businesses {
   max-height: 460px;
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 1rem;
-  /* scrollbar-width: thin; Firefox */
-  -ms-overflow-style: auto; /* IE and Edge */
-}
-.for-nigeria-businesses::-webkit-scrollbar {
-  width: 8px;
-}
-.for-nigeria-businesses::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-.for-nigeria-businesses::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
-}
-.for-nigeria-businesses::-webkit-scrollbar-thumb:hover {
-  background: #555;
+
+  /* Hide scrollbar for Chrome, Safari, Edge */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 /* For Nigerian Businesses */
-
-/* all in on styling */
-
-/* Free trial card - responsive */
-.all-in-one-card-below {
-  width: 100%;
-  max-width: 600px; /* keeps it from getting too wide on large screens */
-}
-
-.all-in-one-card1 {
-  width: 410px;
-  height: 250px;
-}
-
-.all-in-one-card2 {
-  width: 410px;
-  height: 200px;
-}
-
-.accounting-card {
-  height: 220px;
-  width: 360px;
-}
-
-.accounting-card-hr {
-  height: 150px;
-  width: 360px;
-}
-/* all in on styling */
-
-/* become-a-seller-card */
-.become-a-seller-card {
-  width: 410px;
-  height: 320px;
-}
-
-@media (max-width: 600px) {
-  .become-a-seller-card {
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* cookie card styling */
-
-.cookie-card {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(
-    -50%,
-    -50%
-  ); /* centers both horizontally and vertically */
-  background: white;
-  padding: 26px;
-  /* border-radius: 10px; */
-  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  max-width: 600px;
-  width: calc(100% - 40px); /* responsive on small screens */
-}
-
-.cookie-icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-}
-.cookie-title {
-  color: #10182f;
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-.cookie-text {
-  font-size: 0.9rem;
-  color: #212529;
-  margin-bottom: 1rem;
-}
-.cookie-btn {
-  font-size: 0.9rem;
-  padding: 0.5rem 1.5rem;
-  border-radius: 10px;
-}
-.cookie-btn-primary {
-  background-color: #2271b6;
-  border-color: #2271b6;
-  color: white;
-}
-.cookie-btn-primary:hover {
-  background-color: #2271b6;
-  border-color: #2271b6;
-  color: #fff;
-}
-
-.cookie-btn-outline-secondary {
-  border-color: #2271b6;
-  color: #2271b6;
-}
-
-.cookie-btn-outline-secondary:hover {
-  background-color: transparent !important;
-  color: #2271b6;
-  border-color: #2271b6;
-}
-
-.cookie-preferences {
-  font-size: 0.75rem;
-  color: #10182f;
-}
-
-.close-icon {
-  cursor: pointer;
-}
-
-.text-decoration {
-  color: #10182f;
-  text-decoration-color: black;
-}
-
-@media (max-width: 767.98px) {
-  .cookie-btn {
-    width: 100%;
-  }
-}
-/* cookie card styling */
-
-/* Blog Styles */
-
-.blog-card-body {
-  max-width: 400px;
-}
-
-.blog-text-dark {
-  color: var(---hrp-blog-dark);
-}
-.blog-text-primary {
-  color: var(---hrp-blog-primary);
-}
-.blog-text-light {
-  color: var(---hrp-blog-light);
-}
-
-.custom-pagination {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  /* gap: 10px; */
-  padding: 10px 0;
-  font-size: 16px;
-}
-.custom-pagination .page-item {
-  display: inline-block;
-  margin: 0 5px;
-}
-.custom-pagination .page-link {
-  display: inline-block;
-  padding: 10px 15px;
-  border: 1px solid #ccc;
-  border-radius: 0;
-  color: #333;
-  text-decoration: none;
-  background-color: #fff;
-  font-size: 14px; /* Base font size */
-}
-.custom-pagination .page-item.active .page-link {
-  background-color: var(---hrp-blog-primary);
-  border-color: var(---hrp-blog-primary);
-  color: white;
-  font-weight: bold;
-}
-.custom-pagination .page-link:hover {
-  color: var(---hrp-blog-primary);
-}
-.custom-pagination .prev-next {
-  border: none;
-  padding: 0;
-}
-.custom-pagination .prev-next .page-link {
-  border: none;
-  padding: 0 5px;
-  color: #333;
-  font-size: 14px;
-}
-.custom-pagination .prev-next .page-link:hover {
-  background-color: transparent;
-  color: var(---hrp-blog-primary);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .custom-pagination {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-  }
-  .custom-pagination .page-link {
-    padding: 3px 8px;
-    font-size: 12px;
-  }
-  .custom-pagination .prev-next .page-link {
-    font-size: 12px;
-  }
-  .custom-pagination .page-item {
-    margin: 0 3px;
-  }
-}
-
-@media (max-width: 480px) {
-  .custom-pagination {
-    gap: 3px;
-  }
-  .custom-pagination .page-link {
-    padding: 2px 6px;
-    font-size: 10px;
-  }
-  .custom-pagination .prev-next .page-link {
-    font-size: 10px;
-  }
-  .custom-pagination .page-item {
-    margin: 0 2px;
-  }
-  /* Hide some page numbers on very small screens if needed */
-  /* .custom-pagination .page-item:nth-child(n + 4):nth-child(-n + 5) {
-    display: none;
-  } */
-}
-
-.blog-detaials-image-main {
-  width: 1070px;
-}
-
-.suggested-read-mt {
-  margin-top: 6rem;
-}
-
-.blog-anchor {
-  color: var(---hrp-blog-dark);
-  text-decoration: none;
-}
-/* Blog Styles */
-
-/* For Nigerian Businesses Hr */
-.bg-light-gray-hr {
-  background-color: var(---hrp-light-gray);
-}
-/* For Nigerian Businesses Hr */
